@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "Kobe";
+  src: url("/fonts/Kobe1.1-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Certeau";
+  src: url("/fonts/CerteauWeb-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "CerteauBold";
+  src: url("/fonts/CerteauProWeb-Bold.woff2") format("woff2");
+}
+h1, p {
+  font-family: "Certeau";
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  width: 100%;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  background-color: #14453f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #14453f;
+}
+nav ul {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+nav li {
+  list-style: none;
+}
+nav a {
+  font-size: 1em;
+  letter-spacing: 0.15em;
+  font-family: Certeau;
+  color: white;
+}
+
+main {
+  padding-top: 5em;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .description_Top {
+  width: 100%;
+  height: 3em;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main .description_Top .projectTitle {
+  letter-spacing: 0.15em;
+  font-size: 1em;
+}
+main .description_Bottom {
+  overflow: hidden;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "top1 top1 " "bot1 bot2";
+  border-bottom: 1px solid white;
+  justify-content: center;
+  align-content: center;
+}
+main .description_Bottom .Title {
+  font-family: certeauBold;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.15em;
+  font-size: min(3vw, 1em);
+}
+main .description_Bottom .overView_Container {
+  grid-area: top1;
+  margin: 1em 0em;
+}
+main .description_Bottom .capacity_Container {
+  grid-area: bot1;
+}
+main .description_Bottom .team_Container {
+  grid-area: bot2;
+}
+main .description_Bottom .Description {
+  font-size: min(3vw, 1em);
+  line-height: 1.4em;
+  letter-spacing: 0.09em;
+}
+
+.x_Button {
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  main {
+    width: 72%;
+  }
+  nav ul {
+    width: 72%;
+  }
+  nav ul a {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+    overflow: hidden;
+  }
+  nav ul a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: white;
+    transition: opacity 300ms, transform 300ms;
+    opacity: 1;
+    transform: translate3d(-100%, 0, 0);
+  }
+  nav ul a:hover::after,
+nav ul a:focus::after {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.images {
+  margin-top: 2em;
+}
+.images img, .images video {
+  margin-bottom: 2em;
+  width: 100%;
+  display: block;
+}
+.images .images1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "1 2 3";
+  grid-gap: 2em;
+}
+.images .images3 {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "1 2";
+  grid-gap: 2em;
+}/*# sourceMappingURL=DS_Identity.css.map */
