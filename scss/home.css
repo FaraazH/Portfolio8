@@ -42,6 +42,7 @@ html, body {
 }
 
 body {
+  background-color: #3B404A;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,5 +54,6 @@ main {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  min-width: 200px;
   width: 30%;
 }/*# sourceMappingURL=home.css.map */
